@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gatos</title>
+</head>
+<body>
+    <!--main es para posicionar mejor nuestra pagina en los buscadores
+    modernos-->
+  <main>
+      <!-- h1 es el titulo
+      y va desde h1 hasta h6 donde entre menor sea el numero
+      mayor importancia tiene-->
+      
+      <!-- La identacion es dos espacios vacios-->
+      <h1>CatPhotoApp</h1>
+      <!--El elemento section nos ayuda a separar contenido de nuestra pagina-->
+      <section>
+      <h2>Cat Photos</h2>
+      <!--Todo: Add link to cat photos-->
+      <!--p se utiliza para crear parrafos-->
+      <!--Se pueden crear enlaces en donde quiera solo se tiene que aabrir la etiqueta a entes y despues de las palabras que
+      se convertirar en el enlace-->
+      <!--El atributo target del enlace nos hace abrir el enlace en otra pestaña nueva poniendole el valor de _blanck-->
+      <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+      <!--Los enlaces se forman con la etiqueta "(a)" el atributo href nos dice donde esta ese enalace y el texto despues del enlace
+      es lo que nosotros al puchar ahi nos va a llevar a ese enlace-->
+      <!--<a href="https://freecatphotoapp.com">Enlace a fotos de gatos</a>-->
+      <!--los atributos de las etiquetas van despues de la etiqueta por ejemplo la etiqueta img tiene el atributo rsc donde me da la direccion
+      de la localizacion de la imagen de un gato-->
+      <!--El elemento alt que aparece al final es donde debemos de poner una descripcion de la imagen por si no carga la misma imagen-->
+      <!--Para hacer una imagen un enlace sencillamente ponemos la etiqueta a y la imagen se convierte en un atributo de la etiqueta a-->
+      <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"alt="Un lindo gato naranja acostado boca arriba"></a>
+    </section>
+    <section>
+      <h2>Cat lists</h2>
+      <h3>Things cats love:</h3>
+      <!--la etiqueta ul es para poner una lista desordenada
+          la etiqueta li es para añadir un item a una lista desdordenada-->
+      <ul>
+        <li>Cat nip</li>
+        <li>Laser pointers</li>
+        <li>Lasagna</li>
+      </ul>
+      <!--EL elemento figure representa contenido independiente y permite asociar una imagen a una descripcion-->
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="Una rebanada de lasaña en un plato">
+        <!--El elemento figcaption se utiliza para añadir una descripcion o leyenda para describir una imagen anidada en un elemento figure-->
+        <!--Para enfatizar una palabra poniendola en cursiva se utiliza el atributo "(em)" envolviendo la palabra a destacar-->
+        <figcaption>A los gatos les <em>encanta</em> lasaña</figcaption>
+      </figure>
+      <h3>Las 3 cosas principales que odian los gatos:</h3>
+      <!--La lista ordenada "(ol)" es similar a la lista no ordenada "(ul)" solo que en esta aparaceran los elementos enumerados-->
+      <ol>
+        <li>tratamiento contra pulgas</li>
+        <li>trueno</li>
+        <li>otros gatos</li>
+      </ol>
+      <figure>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Cinco gatos mirando alrededor de un campo.">
+        <!--El atributo "(strong)" se utiliza para enfatizar una cosa importante-->
+        <figcaption>Los gatos <strong>odian</strong> a otros gatos.</figcaption>
+      </figure>
+    </section>
+    <section>
+      <h2>Forma de gato</h2>
+      <!--El elemento "(form)" nos permite crear un formulario web para recolectar información de los usuarios.-->
+      <!--El atributo action indica, dónde deben enviarse los datos del formulario.-->
+      <form action="https://freecatphotoapp.com/submit-cat-photo.">
+        <!--Hay diferentes tipos de elementos input, los cuales los puedes crear con el atributo type. Puedes crear fácilmente un campo de contraseña (password), un botón de reinicio (reset) o un control para permitir a los usuarios seleccionar un archivo desde su computadora-->
+        <!--Para que los datos de un formulario puedan acceder al destino especificado en el atributo action, debes darle al campo de texto un atributo name y darle un valor que represente a los datos que están siendo enviados-->
+        <!--A pesar de que hayas añadido tu botón debajo del elemento input de tipo texto, estos aparecen juntos en la página. Esto se debe a que los elementos input y button son elementos inline, los cuales no aparecen en una nueva línea.-->
+        <!--Los elementos label se utilizan para ayudar a asociar el texto a un elemento input con el propio elemento input-->
+        <!--El atributo id se utiliza para identificar elementos HTML específicos. Cada atributo id debe tener un valor único, diferente a los demás valores id de la página.-->
+        <!--Para seleccionar solo un radio boton se usa el atributo name logrando asi que si selecciona una la otra se des selecciona-->
+        <!--Si seleccionas el radio button Indoor y envías el formulario, los datos del radio button se basarán en sus atributos name y value. Ya que tus elementos radio button no tienen el atributo value, los datos del formulario se verán así indoor-outdoor=on, -->
+        <!--lo cual no es útil cuando tienes múltiples radio button. Añade un atributo value a ambos radio button. Por conveniencia, a los atributos value dales el mismo valor del atributo id de cada radio button.-->
+        <!--El elemento fieldset se utiliza para agrupar elementos input y label relacionados dentro de un formulario web. Los elementos fieldset son elementos de nivel de bloque, lo que significa que aparecen en una nueva línea.-->
+      <!--El elemento legend actúa como una leyenda/descripción, para el contenido del elemento fieldset. Le da a los usuarios un contexto sobre lo que deben ingresar en esa parte del formulario.-->
+        <fieldset>
+          <legend>¿Tu gato es un gato de interior o de exterior?</legend>
+          <!--Para hacer que un checkbox o un radio button este seleccionado por defecto, necesitas añadir el atributo checked. No hay necesidad de agregarle un valor al atributo checked. Simplemente necesitas añadir la palabra checked al elemento input, asegurándote de que hay espacios entre ella y los otros atributos.-->
+        <label><input name="Interior-Exterior" id="Interior" type="radio" value="Interior" checked >Interior</label>
+        <label><input name="Interior-Exterior" id="Exterior" type="radio" value="Exterior">Exterior</label>
+      </fieldset>
+      <fieldset>
+        <legend>¿Cuál es la personalidad de tu gato?</legend>
+        <!--Hay otra manera de asociar un texto con el elemento input. Puedes anidar un texto dentro de un elemento label y añadirle un atributo for con el mismo valor del atributo id del elemento input.-->
+          <label for="carinoso"><input id="carinoso" type="checkbox" value="carinoso">Cariñoso</label>
+          <!--Asocie el texto Loving con la casilla de verificación anidando solo el texto Loving en un elemento de etiqueta y dándole un atributo for apropiado.-->
+          <!--Añade el atributo name con el valor personality al elemento input de tipo checkbox. Aunque no notarás cambios en el navegador, hacer esto hará más fácil que un servidor procese tu formulario web, especialmente cuando hay múltiples checkbox.-->
+          <input name="personality" id="loving" type="checkbox" value="loving" checked > <label for="loving"> Cariñoso</label>
+          <input id="lazy"type="checkbox" name="personality" value="lazy"> <label for="lazy">Perezoso</label>
+          <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energético</label>
+      </fieldset>
+        <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+        <!--La etiqueta button permite crear un boton- Lo que valla entre esta etiqueta es el nombre que llevara el boton--> 
+        <button type="submit">Submit</button>
+        <!--Puedes usar botones de radio (radio button) para preguntas en las que quieres que el usuario solo te dé una respuesta a partir de múltiples opciones.-->
+      </form>
+      <!--El elemento input te permite recolectar datos desde un formulario web de diferentes formas. Al igual que los elementos img, los elementos input son de auto-cierre y no necesitan etiquetas de cierre.-->
+      <!--Un texto provisional (placeholder) nos da una idea de que tipo de información debemos escribir en un elemento input.-->
+      <!--<input type="text" name="catphotourl" placeholder="cat photo URL"> por ejemplo-->
+      <!--Para evitar que un usuario entregue su formulario incompleto, necesitas añadir el atributo required al elemento input. El atributo required no necesita ningún valor. Simplemente necesitas añadir la palabra required al elemento input, asegurándote de que hay espacios entre ella y los otros atributos.-->
+    </section>
+  </main>
+  <footer>
+    <p>No Copyright - <a href="https://www.freecodecamp.org"> freeCodeCamp.org</a></p>
+  </footer>
+</body>
+</html>
